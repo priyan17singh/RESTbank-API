@@ -4,11 +4,7 @@ const {authMiddleware, authSystemMiddleware} = require("../middleware/auth.middl
 
 const router = express.Router();
 
-/**
- * Protected routes
- * 
- * 
- */
+
 
 router.post("/create",authMiddleware,createTransaction);
 router.post("/system/initiate-funds", authSystemMiddleware, createInitialFundsTransaction);
